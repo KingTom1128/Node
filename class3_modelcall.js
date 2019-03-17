@@ -3,9 +3,9 @@ var User = require('./models/User');
 var Teacher = require('./models/Teacher');
 
 http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+  response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
 
-  if(request!=="/favicon/icon"){
+  if (request !== "/favicon/icon") {
     teacher = new Teacher(1, 'Tom', 19);
     teacher.enter();
     teacher.teach(response);
