@@ -7,7 +7,6 @@ http.createServer(function (request, response) {
     var pathname = url.parse(request.url).pathname;
     pathname = pathname.replace(/\//, '');
     router[pathname](request, response);
-    console.log(pathname);
     response.end('');
   }
 }).listen(8000);
